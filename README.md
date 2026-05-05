@@ -66,16 +66,6 @@ Les design tokens sont la **source de vérité** du système. Ils sont définis 
 }
 ```
 
-Pour le theming dynamique, les tokens sont aussi exposés en CSS custom properties :
-
-```scss
-// _colors.scss
-:root {
-  --color-brand-500: #3b5bdb;
-  --color-neutral-100: #f1f3f5;
-}
-```
-
 > 💡 **Règle d'or** : on ne met jamais de valeur brute (`#3b5bdb`, `16px`) dans un composant. Tout passe par les tokens.
 
 ---
