@@ -1,0 +1,56 @@
+@use '../../styles/tokens' as t;
+
+.btn {
+    font-family: t.$font-display;
+    font-weight: t.$weight-bold;
+    letter-spacing: t.$tracking-widest;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: t.$space-sm;
+    transition: all t.$transition-base;
+    border-radius: t.$radius-xs;
+    font-size: t.$text-base;
+    padding: t.$space-md t.$space-xl;
+    line-height: 1;
+    text-decoration: none;
+}
+.btn-primary {
+    background: t.$color-accent;
+    color: t.$color-text-inverse;
+}
+.btn-primary:hover {
+    background: t.$color-accent-hover;
+    box-shadow: t.$shadow-accent;
+    transform: translateY(-1px);
+}
+.btn-secondary {
+    background: transparent;
+    color: t.$color-text-primary;
+    border: 1px solid t.$color-border;
+}
+.btn-secondary:hover {
+    border-color: t.$color-accent;
+    color: t.$color-text-accent;
+}
+.btn-ghost {
+    background: transparent;
+    color: t.$color-text-muted;
+}
+.btn-ghost:hover {
+    color: t.$color-text-primary;
+}
+.btn-danger {
+    background: t.$color-danger;
+    color: #fff;
+}
+.btn-lg {
+    font-size: t.$text-lg;
+    padding: t.$space-md t.$space-xl;
+}
+.btn-sm {
+    font-size: t.$text-sm;
+    padding: t.$space-sm t.$space-md;
+}

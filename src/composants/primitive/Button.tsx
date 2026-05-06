@@ -1,3 +1,5 @@
+import styles from './Button.module.scss';
+
 type ButtonProps = {
     variant?: 'primary' | 'secondary' | 'ghost' | 'danger';
     size?: 'sm' | 'md' | 'lg';
@@ -11,7 +13,7 @@ export default function Button(props: ButtonProps) {
     const sizeClass = props.size ? `btn-${props.size}` : 'btn-md';
 
     return (
-        <button className={`btn ${variantClass} ${sizeClass}`} disabled={props.isDisabled} onClick={props.onClick}>
+        <button className={`${styles.btn} ${styles[variantClass]} ${styles[sizeClass]}`} disabled={props.isDisabled} onClick={props.onClick}>
             {props.children || "Button"}
         </button>
     )
