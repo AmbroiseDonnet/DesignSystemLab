@@ -17,40 +17,40 @@
     line-height: 1;
     text-decoration: none;
 }
-.btn-primary {
+.btnPrimary {
     background: t.$color-accent;
     color: t.$color-text-inverse;
 }
-.btn-primary:hover {
+.btnPrimary:hover {
     background: t.$color-accent-hover;
     box-shadow: t.$shadow-accent;
     transform: translateY(-1px);
 }
-.btn-secondary {
+.btnSecondary {
     background: transparent;
     color: t.$color-text-primary;
     border: 1px solid t.$color-border;
 }
-.btn-secondary:hover {
+.btnSecondary:hover {
     border-color: t.$color-accent;
     color: t.$color-text-accent;
 }
-.btn-ghost {
+.btnGhost {
     background: transparent;
     color: t.$color-text-muted;
 }
-.btn-ghost:hover {
+.btnGhost:hover {
     color: t.$color-text-primary;
 }
-.btn-danger {
+.btnDanger {
     background: t.$color-danger;
     color: #fff;
 }
-.btn-lg {
+.btnLg {
     font-size: t.$text-lg;
     padding: t.$space-md t.$space-xl;
 }
-.btn-sm {
+.btnSm {
     font-size: t.$text-sm;
     padding: t.$space-sm t.$space-md;
 }

@@ -5,12 +5,12 @@ type BadgeProps = {
     children?: React.ReactNode;
 }
 
-export default function Badge(props: BadgeProps) {
-    const badgeClass = props.badgeType ? `badge-${props.badgeType}` : 'badge-info';
+export default function Badge({ badgeType, children }: BadgeProps) {
+    const badgeClass = badgeType ? `badge${badgeType.charAt(0).toUpperCase() + badgeType.slice(1)}` : 'badgeAccent';
 
     return (
         <div className={`${styles.badge} ${styles[badgeClass]}`}>
-            {props.children || "Badge"}
+            {children || "Badge"}
         </div>
     )
 }

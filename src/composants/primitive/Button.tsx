@@ -7,14 +7,14 @@ type ButtonProps = {
     onClick?: () => void;
     children?: React.ReactNode;
 }
-export default function Button(props: ButtonProps) {
+export default function Button({ variant, size, isDisabled, onClick, children }: ButtonProps) {
 
-    const variantClass = props.variant ? `btn-${props.variant}` : 'btn-primary';
-    const sizeClass = props.size ? `btn-${props.size}` : 'btn-md';
+    const variantClass = variant ? `btn${variant.charAt(0).toUpperCase() + variant.slice(1)}` : 'btn-primary';
+    const sizeClass = size ? `btn${size.charAt(0).toUpperCase() + size.slice(1)}` : 'btn-md';
 
     return (
-        <button className={`${styles.btn} ${styles[variantClass]} ${styles[sizeClass]}`} disabled={props.isDisabled} onClick={props.onClick}>
-            {props.children || "Button"}
+        <button className={`${styles.btn} ${styles[variantClass]} ${styles[sizeClass]}`} disabled={isDisabled} onClick={onClick}>
+            {children || "Button"}
         </button>
     )
 }

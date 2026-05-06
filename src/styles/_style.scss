@@ -350,9 +350,6 @@ body {
     gap: t.$space-md;
 }
 
-
-
-
 /* Inputs */
 .field {
     display: flex;
@@ -385,29 +382,7 @@ body {
     color: t.$color-text-muted;
 }
 
-/* Card */
-.card {
-    background: t.$color-bg-surface;
-    border: 1px solid t.$color-border-subtle;
-    border-radius: t.$radius-md;
-    padding: t.$space-lg t.$space-xl;
-}
-.card-accent {
-    border-left: 2px solid t.$color-accent;
-}
-.card-title {
-    font-family: t.$font-display;
-    font-weight: t.$weight-bold;
-    font-size: t.$text-lg;
-    letter-spacing: t.$tracking-wide;
-    text-transform: uppercase;
-    margin-bottom: t.$space-sm;
-}
-.card-body {
-    font-size: t.$text-base;
-    color: t.$color-text-secondary;
-    line-height: t.$leading-normal;
-}
+
 
 /* Alert */
 .alert {
