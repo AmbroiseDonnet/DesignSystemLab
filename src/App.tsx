@@ -1,3 +1,6 @@
+import Badge from "./composants/primitive/Badge";
+import Button from "./composants/primitive/Button";
+
 export default function App() {
   return (
     <>
@@ -8,7 +11,6 @@ export default function App() {
                 <div className="sidebar-brand">
                     <h1>Design System</h1>
                     <p>φ = 1.618 · v1.0</p>
-                    <p>Pour l'instant il n'y a aucun composant en react</p>
                 </div>
                 <nav>
                     <div className="nav-group">
@@ -20,13 +22,13 @@ export default function App() {
                     </div>
                     <div className="nav-group">
                         <span className="nav-group-label">Composants</span>
-                        <a href="#boutons" className="nav-link">Boutons</a>
-                        <a href="#badges" className="nav-link">Badges</a>
-                        <a href="#formulaires" className="nav-link">Formulaires</a>
-                        <a href="#cards" className="nav-link">Cards</a>
-                        <a href="#alertes" className="nav-link">Alertes</a>
-                        <a href="#stats" className="nav-link">Statistiques</a>
-                        <a href="#tables" className="nav-link">Tables</a>
+                        <a href="#boutons" className="nav-link">Boutons <Badge badgeType="success">Fait</Badge></a>
+                        <a href="#badges" className="nav-link">Badges <Badge badgeType="success">Fait</Badge></a>
+                        <a href="#formulaires" className="nav-link">Formulaires <Badge badgeType="warning">WIP</Badge></a>
+                        <a href="#cards" className="nav-link">Cards <Badge badgeType="danger">A faire</Badge></a>
+                        <a href="#alertes" className="nav-link">Alertes <Badge badgeType="danger">A faire</Badge></a>
+                        <a href="#stats" className="nav-link">Statistiques <Badge badgeType="danger">A faire</Badge></a>
+                        <a href="#tables" className="nav-link">Tables <Badge badgeType="danger">A faire</Badge></a>
                     </div>
                 </nav>
             </aside>
@@ -292,18 +294,26 @@ export default function App() {
                     <div className="subsection">
                         <span className="subsection-label">Variantes</span>
                         <div className="comp-row">
-                            <button className="btn btn-primary">Déployer</button>
-                            <button className="btn btn-secondary">Annuler</button>
-                            <button className="btn btn-ghost">En savoir plus</button>
-                            <button className="btn btn-danger">Purger</button>
+                            <Button variant="primary">Déployer</Button>
+                            <Button variant="secondary">Annuler</Button>
+                            <Button variant="ghost">En savoir plus</Button>
+                            <Button variant="danger">Purger</Button>
                         </div>
                     </div>
                     <div className="subsection">
                         <span className="subsection-label">Tailles</span>
                         <div className="comp-row">
-                            <button className="btn btn-primary btn-sm">Petit</button>
-                            <button className="btn btn-primary">Défaut</button>
-                            <button className="btn btn-primary btn-lg">Grand</button>
+                            <Button size="sm">Petit</Button>
+                            <Button size="md">Défaut</Button>
+                            <Button size="lg">Grand</Button>
+                        </div>
+                    </div>
+                    <div className="subsection">
+                        <span className="subsection-label">Association des tailles et variantes</span>
+                        <div className="comp-row">
+                            <Button variant="primary" size="sm">Petit</Button>
+                            <Button variant="secondary" size="md">Défaut</Button>
+                            <Button variant="danger" size="lg">Grand</Button>
                         </div>
                     </div>
                 </section>
@@ -315,11 +325,11 @@ export default function App() {
                         <span className="section-title">Badges</span>
                     </div>
                     <div className="comp-row">
-                        <span className="badge badge-accent">Actif</span>
-                        <span className="badge badge-danger">Critique</span>
-                        <span className="badge badge-success">Opérationnel</span>
-                        <span className="badge badge-warning">En attente</span>
-                        <span className="badge badge-neutral">Archivé</span>
+                        <Badge badgeType="accent">Actif</Badge>
+                        <Badge badgeType="danger">Critique</Badge>
+                        <Badge badgeType="success">Opérationnel</Badge>
+                        <Badge badgeType="warning">En attente</Badge>
+                        <Badge badgeType="neutral">Archivé</Badge>
                     </div>
                 </section>
 
