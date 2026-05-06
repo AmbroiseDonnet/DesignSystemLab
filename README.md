@@ -106,7 +106,6 @@ import { Button } from '@/components/primitives/Button'
 - [ ] Composants primitifs (Button, Input, Badge, Tag)
 - [ ] Composants de layout (Stack, Grid)
 - [ ] Composants composites (Card, Modal, Dropdown)
-- [ ] Documentation interactive (Storybook)
 - [ ] Système de thème (light / dark)
 
 ---
