@@ -149,7 +149,9 @@ body {
     border-radius: t.$radius-md;
     overflow: hidden;
     height: 52px;
-    margin-bottom: t.$space-md;
+    width: 90%;
+    margin: 0 auto t.$space-md;
+    border: 1px solid t.$color-border;
 }
 .color-swatch {
     flex: 1;
@@ -605,4 +607,105 @@ body {
 ::-webkit-scrollbar-thumb {
     background: t.$color-border;
     border-radius: 2px;
+}
+
+/* ---- SWATCHES — orange ---- */
+.swatch-orange-50  { background: t.$color-orange-50; }
+.swatch-orange-100 { background: t.$color-orange-100; }
+.swatch-orange-200 { background: t.$color-orange-200; }
+.swatch-orange-400 { background: t.$color-orange-400; }
+.swatch-orange-500 {
+    background: t.$color-orange-500;
+    outline: 2px solid t.$color-orange-500;
+    outline-offset: -3px;
+}
+.swatch-orange-600 { background: t.$color-orange-600; }
+.swatch-orange-800 { background: t.$color-orange-800; }
+.swatch-orange-900 { background: t.$color-orange-900; }
+
+/* ---- SWATCHES — stone ---- */
+.swatch-stone-50  { background: t.$color-stone-50; }
+.swatch-stone-100 { background: t.$color-stone-100; }
+.swatch-stone-200 { background: t.$color-stone-200; }
+.swatch-stone-400 { background: t.$color-stone-400; }
+.swatch-stone-500 { background: t.$color-stone-500; }
+.swatch-stone-600 { background: t.$color-stone-600; }
+.swatch-stone-700 { background: t.$color-stone-700; }
+.swatch-stone-800 { background: t.$color-stone-800; }
+.swatch-stone-900 { background: t.$color-stone-900; }
+
+/* ---- DOTS sémantiques ---- */
+.dot-accent  { background: t.$color-accent; }
+.dot-danger  { background: t.$color-danger; }
+.dot-success { background: t.$color-success; }
+.dot-warning { background: t.$color-warning; }
+
+/* ---- Échantillons de police ---- */
+.font-sample-display {
+    font-family: t.$font-display;
+    font-weight: t.$weight-black;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+.font-sample-body {
+    font-family: t.$font-body;
+    font-size: t.$text-base;
+    line-height: t.$leading-normal;
+    color: t.$color-stone-400;
+}
+.font-sample-mono {
+    font-family: t.$font-mono;
+    font-size: 13px;
+    color: t.$color-stone-500;
+    letter-spacing: t.$tracking-wide;
+}
+
+/* ---- Type scale modifiers ---- */
+.type-sample--2xl  { font-size: t.$text-2xl; }
+.type-sample--xl   { font-size: t.$text-xl; }
+.type-sample--lg   { font-size: t.$text-lg; }
+.type-sample--base { font-size: t.$text-base; font-weight: t.$weight-medium; }
+.type-sample--sm   { font-size: t.$text-sm; }
+.type-sample--xs   { font-size: t.$text-xs; }
+
+/* ---- Space bars — largeurs ---- */
+.space-bar--xs  { width: t.$space-xs; }
+.space-bar--sm  { width: t.$space-sm; }
+.space-bar--md  { width: t.$space-md; }
+.space-bar--lg  { width: t.$space-lg; }
+.space-bar--xl  { width: t.$space-xl; }
+.space-bar--2xl { width: t.$space-2xl; }
+
+/* ---- Radius box modifiers ---- */
+.radius-box--none { border-radius: t.$radius-none; }
+.radius-box--xs   { border-radius: t.$radius-xs; }
+.radius-box--sm   { border-radius: t.$radius-sm; }
+.radius-box--md   { border-radius: t.$radius-md; }
+.radius-box--lg   { border-radius: t.$radius-lg; }
+.radius-box--xl   { border-radius: t.$radius-xl; }
+.radius-box--full { border-radius: t.$radius-full; }
+
+/* ---- Formulaires ---- */
+.comp-2col--form { max-width: 520px; }
+.input--accent   { border-color: t.$color-accent; }
+
+/* ---- Alertes ---- */
+.alerts-stack {
+    display: flex;
+    flex-direction: column;
+    gap: t.$space-md;
+    max-width: 560px;
+}
+
+/* ---- Table — colonnes valeur & env ---- */
+.td-mono {
+    font-family: t.$font-mono;
+    font-size: t.$text-sm;
+    color: t.$color-text-muted;
+}
+.td-meta {
+    font-size: t.$text-sm;
+    color: t.$color-text-muted;
 }
