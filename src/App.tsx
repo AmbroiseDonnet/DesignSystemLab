@@ -1,3 +1,6 @@
+import Grid from "./composants/layout/Grid";
+import GridElement from "./composants/layout/GridElement";
+import Card from "./composants/patterns/Card";
 import Badge from "./composants/primitive/Badge";
 import Button from "./composants/primitive/Button";
 
@@ -24,11 +27,15 @@ export default function App() {
                         <span className="nav-group-label">Composants</span>
                         <a href="#boutons" className="nav-link">Boutons <Badge badgeType="success">Fait</Badge></a>
                         <a href="#badges" className="nav-link">Badges <Badge badgeType="success">Fait</Badge></a>
-                        <a href="#formulaires" className="nav-link">Formulaires <Badge badgeType="warning">WIP</Badge></a>
-                        <a href="#cards" className="nav-link">Cards <Badge badgeType="danger">A faire</Badge></a>
+                        <a href="#formulaires" className="nav-link">Formulaires <Badge badgeType="danger">A faire</Badge></a>
+                        <a href="#cards" className="nav-link">Cards <Badge badgeType="success">Fait</Badge></a>
                         <a href="#alertes" className="nav-link">Alertes <Badge badgeType="danger">A faire</Badge></a>
                         <a href="#stats" className="nav-link">Statistiques <Badge badgeType="danger">A faire</Badge></a>
                         <a href="#tables" className="nav-link">Tables <Badge badgeType="danger">A faire</Badge></a>
+                    </div>
+                    <div className="nav-group">
+                        <span className="nav-group-label">Layout Composant</span>
+                        <a href="#grid" className="nav-link">Grid <Badge badgeType="success">Fait</Badge></a>
                     </div>
                 </nav>
             </aside>
@@ -303,9 +310,9 @@ export default function App() {
                     <div className="subsection">
                         <span className="subsection-label">Tailles</span>
                         <div className="comp-row">
-                            <Button size="sm">Petit</Button>
-                            <Button size="md">Défaut</Button>
-                            <Button size="lg">Grand</Button>
+                            <Button variant="primary" size="sm">Petit</Button>
+                            <Button variant="primary" size="md">Défaut</Button>
+                            <Button variant="primary" size="lg">Grand</Button>
                         </div>
                     </div>
                     <div className="subsection">
@@ -366,16 +373,14 @@ export default function App() {
                         <span className="section-title">Cards</span>
                     </div>
                     <div className="comp-2col">
-                        <div className="card card-accent">
-                            <p className="card-title">Mission active</p>
-                            <p className="card-body">Récupération de données dans le secteur 7. Durée estimée : 48h. Équipe : 4
+                        <Card title="Mission active" accent={true}>
+                            <p>Récupération de données dans le secteur 7. Durée estimée : 48h. Équipe : 4
                                 opérateurs.</p>
-                        </div>
-                        <div className="card">
-                            <p className="card-title">Rapport système</p>
-                            <p className="card-body">Tous les nœuds sont opérationnels. Dernière synchronisation il y a 3
+                        </Card>
+                        <Card title="Rapport système">
+                            <p>Tous les nœuds sont opérationnels. Dernière synchronisation il y a 3
                                 minutes.</p>
-                        </div>
+                        </Card>
                     </div>
                 </section>
 
@@ -465,6 +470,51 @@ export default function App() {
                             </tr>
                         </tbody>
                     </table>
+                </section>
+                {/* TABLES */}
+                <section className="section" id="grid">
+                    <div className="section-header">
+                        <span className="section-index">12</span>
+                        <span className="section-title">Grilles</span>
+                    </div>
+                    <Grid cols={4} rows={6}>
+                        <GridElement colSpan={1} rowSpan={4}>
+                            <Card title="Mission active" accent={true}>
+                                <p>Récupération de données dans le secteur 7. Durée estimée : 48h. Équipe : 4
+                                    opérateurs.</p>
+                            </Card>
+                        </GridElement>
+                        <GridElement colSpan={3} rowSpan={2}>
+                            <Card title="Rapport système">
+                                <p>Tous les nœuds sont opérationnels. Dernière synchronisation il y a 3
+                                    minutes.</p>
+                            </Card>
+                        </GridElement>
+                        <GridElement colSpan={3} rowSpan={2}>
+                            <Card title="Voyageurs en approche">
+                                <p>Les capsules sont en approche de la station. Temps estimé : 2 heures.</p>
+                            </Card>
+                        </GridElement>
+                        <GridElement colSpan={4} rowSpan={6}>
+                            <Card title="Voyageurs en approche">
+                                <p>Les capsules sont en approche de la station. Temps estimé : 2 heures.</p>
+                            </Card>
+                        </GridElement>
+                    </Grid>
+                    <Grid cols={3} rows={1} gap="sm">
+                        <GridElement colSpan={1} rowSpan={1}>
+                            <Card title="Mission active" accent={true}>
+                                <p>Récupération de données dans le secteur 7. Durée estimée : 48h. Équipe : 4
+                                    opérateurs.</p>
+                            </Card>
+                        </GridElement>
+                        <GridElement colSpan={2} rowSpan={1}>
+                            <Card title="Rapport système">
+                                <p>Tous les nœuds sont opérationnels. Dernière synchronisation il y a 3
+                                    minutes.</p>
+                            </Card>
+                        </GridElement>
+                    </Grid>
                 </section>
 
             </main>

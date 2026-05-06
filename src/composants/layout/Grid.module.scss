@@ -1,0 +1,30 @@
+@use '../../styles/tokens' as t;
+
+.grid {
+    display: grid;
+    gap: t.$space-xl;
+    width: 100%;
+    grid-auto-flow:dense;
+    margin: t.$space-2xl 0;
+
+    &.space-xs {
+        gap: t.$space-xs;
+    }
+    &.space-sm {
+        gap: t.$space-sm;
+    }
+    &.space-md {
+        gap: t.$space-md;
+    }
+    &.space-lg {
+        gap: t.$space-lg;
+    }
+    &.space-xl {
+        gap: t.$space-xl;
+    }
+    &.space-2xl {
+        gap: t.$space-2xl;
+    }
+}
+
+
