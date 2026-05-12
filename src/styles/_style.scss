@@ -5,20 +5,7 @@
    Styles de la page de documentation
    ============================================ */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    background: t.$color-bg-base;
-    color: t.$color-text-primary;
-    font-family: t.$font-body;
-    font-size: t.$text-base;
-    line-height: t.$leading-normal;
-    min-height: 100vh;
-}
 
 /* ---- SIDEBAR NAV ---- */
 .layout {

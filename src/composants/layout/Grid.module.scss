@@ -2,11 +2,9 @@
 
 .grid {
     display: grid;
-    gap: t.$space-xl;
     width: 100%;
     grid-auto-flow:dense;
-    margin: t.$space-2xl 0;
-
+    margin: t.$space-xl 0;
     &.space-xs {
         gap: t.$space-xs;
     }

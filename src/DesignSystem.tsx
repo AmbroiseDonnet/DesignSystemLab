@@ -4,7 +4,7 @@ import Card from "./composants/patterns/Card";
 import Badge from "./composants/primitive/Badge";
 import Button from "./composants/primitive/Button";
 
-export default function App() {
+export default function DesignSystem() {
   return (
     <>
         <div className="layout">

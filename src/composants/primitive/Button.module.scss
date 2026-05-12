@@ -3,19 +3,26 @@
 .btn {
     font-family: t.$font-display;
     font-weight: t.$weight-bold;
+    font-size: t.$text-base;
     letter-spacing: t.$tracking-widest;
     text-transform: uppercase;
+    background-color: t.$color-accent;
+    color: t.$color-text-inverse;
     border: none;
-    cursor: pointer;
+    border-radius: t.$radius-xs;
+    padding: t.$space-md t.$space-xl;
+    transition: all t.$transition-base;
+    line-height: 1;
+    width: 100%;
+    box-sizing: border-box;
     display: inline-flex;
     align-items: center;
-    gap: t.$space-sm;
-    transition: all t.$transition-base;
-    border-radius: t.$radius-xs;
-    font-size: t.$text-base;
-    padding: t.$space-md t.$space-xl;
-    line-height: 1;
+    justify-content: center;
     text-decoration: none;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+
 }
 .btnPrimary {
     background: t.$color-accent;
@@ -53,4 +60,16 @@
 .btnSm {
     font-size: t.$text-sm;
     padding: t.$space-sm t.$space-md;
+}
+
+
+button {
+
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
